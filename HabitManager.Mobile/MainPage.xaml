@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HabitManager.Mobile.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Habit Manager"
+    BackgroundColor="#F5F6FA">
+
+    <Grid Padding="20" RowDefinitions="Auto,Auto,*" RowSpacing="16">
+
+        <VerticalStackLayout Grid.Row="0" Spacing="4">
+            <Label
+                Text="Habit Manager"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#20243A" />
+
+            <Label
+                Text="Build better habits, one day at a time."
+                FontSize="14"
+                TextColor="#73788C" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Spacing="8">
+            <Label
+                Text="Current user"
+                FontAttributes="Bold"
+                TextColor="#20243A" />
+
+            <Picker
+                x:Name="UserPicker"
+                Title="Select a user"
+                SelectedIndexChanged="OnUserChanged"
+                BackgroundColor="White" />
+
+            <Button
+                Text="+ Add habit"
+                Clicked="OnAddHabitClicked"
+                BackgroundColor="#5965D8"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="48" />
+
+            <HorizontalStackLayout Spacing="8">
+                <Label
+                    Text="Today's habits"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#20243A"
+                    VerticalOptions="Center" />
+
+                <Label
+                    x:Name="ProgressLabel"
+                    FontSize="14"
+                    TextColor="#73788C"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout
+                x:Name="HabitsContainer"
+                Spacing="12" />
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

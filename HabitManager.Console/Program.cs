@@ -149,7 +149,7 @@ Console.WriteLine($"  Schedule: {dto.Schedule}");
 
 Console.WriteLine();
 Console.WriteLine("========================================");
-Console.WriteLine("Демонстрация завершена.");
+Console.WriteLine("Demo over.");
 Console.WriteLine("========================================");
 
 static HabitDto ToDto(Habit habit)
